@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AG Suitcases | Suitcases, Sets & Bags</title>
+<meta name="description" content="Suitcase sets, individual cases and bags. Browse real product photos, see clear prices, and confirm availability on WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F4F3EF;--surf:#FFFFFF;--surf2:#ECEAE5;
+  --ink:#171717;--ink2:#575757;--ink3:#969490;
+  --acc:#1B5E85;--acc2:#134869;--acclt:#E8F3F9;
+  --wa:#075E54;--wa2:#054D44;
+  --ok:#2D7A3C;--err:#C0392B;
+  --bdr:#E0DED7;--bdr2:#C6C4BC;
+  --sh1:0 1px 3px rgba(0,0,0,.05);
+  --sh2:0 4px 20px rgba(0,0,0,.09);
+  --sh3:0 14px 48px rgba(0,0,0,.13);
+  --r:5px;--rl:10px;
+  --f:'Plus Jakarta Sans',system-ui,-apple-system,sans-serif;
+  --tr:.16s ease;--hh:64px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{font-size:16px}
+body{font-family:var(--f);background:var(--bg);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{cursor:pointer;border:none;background:none;font-family:var(--f);line-height:1}
+input,select,textarea{font-family:var(--f)}
+ul,ol{list-style:none}
+/* LAYOUT */
+.wrap{max-width:1240px;margin:0 auto;padding:0 28px}
+.sec{padding:88px 0}
+.sec-sm{padding:56px 0}
+/* DEMO BAR */
+#demo-bar{background:var(--ink);color:rgba(255,255,255,.7);padding:9px 0;text-align:center;font-size:11.5px;letter-spacing:.01em}
+#demo-bar a{color:rgba(255,255,255,.92);text-decoration:underline;text-underline-offset:2px}
+/* HEADER */
+#hdr{position:sticky;top:0;z-index:90;height:var(--hh);background:var(--surf);border-bottom:1px solid var(--bdr)}
+.hdr-in{max-width:1240px;margin:0 auto;padding:0 28px;height:100%;display:flex;align-items:center;gap:4px}
+.logo{cursor:pointer;line-height:1;flex-shrink:0;user-select:none}
+.lm{font-size:21px;font-weight:800;letter-spacing:-.04em;color:var(--ink);display:block}
+.ls{font-size:6.5px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--ink3);display:block;margin-top:2px}
+.nav-d{display:flex;align-items:center;gap:1px;margin-left:auto}
+.nl{font-size:13.5px;font-weight:500;color:var(--ink2);padding:6px 11px;border-radius:var(--r);cursor:pointer;transition:color var(--tr),background var(--tr)}
+.nl:hover{color:var(--ink);background:var(--bg)}
+.nl.on{color:var(--ink);font-weight:600}
+.cbtn{display:flex;align-items:center;gap:6px;font-size:13.5px;font-weight:600;padding:7px 14px;margin-left:8px;border:1.5px solid var(--bdr2);border-radius:var(--r);background:transparent;color:var(--ink);transition:background var(--tr)}
+.cbtn:hover{background:var(--bg)}
+.cct{display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;border-radius:50%;background:var(--acc);color:#fff;font-size:10px;font-weight:700}
+.cct.hi{display:none}
+.hambtn{display:none;flex-direction:column;gap:5px;padding:8px;margin-left:6px;cursor:pointer}
+.hambtn span{display:block;width:20px;height:1.5px;background:var(--ink);border-radius:2px}
+/* MOBILE MENU */
+#mmenu{position:fixed;inset:0;z-index:200;display:none;flex-direction:column}
+#mmenu.open{display:flex}
+.m-back{position:absolute;inset:0;background:rgba(0,0,0,.44);backdrop-filter:blur(3px)}
+.m-panel{position:relative;width:min(284px,84vw);height:100%;background:var(--surf);box-shadow:var(--sh3);display:flex;flex-direction:column}
+.m-top{height:var(--hh);display:flex;align-items:center;padding:0 20px;border-bottom:1px solid var(--bdr);flex-shrink:0}
+.m-close{margin-left:auto;width:32px;height:32px;display:flex;align-items:center;justify-content:center;font-size:17px;color:var(--ink2);cursor:pointer;border-radius:var(--r)}
+.m-close:hover{background:var(--bg)}
+.m-links{padding:6px 0;overflow-y:auto;flex:1}
+.mlink{display:block;font-size:15px;font-weight:600;color:var(--ink);padding:13px 20px;border-bottom:1px solid var(--bdr);cursor:pointer;transition:color var(--tr)}
+.mlink:hover{color:var(--acc)}
+.mlink-sm{font-size:13px;font-weight:500;color:var(--ink2);padding-left:32px}
+/* BUTTONS */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-family:var(--f);font-size:14px;font-weight:600;padding:11px 22px;border-radius:var(--r);border:none;cursor:pointer;transition:all var(--tr);white-space:nowrap}
+.btn-ink{background:var(--ink);color:#fff}
+.btn-ink:hover{background:#333}
+.btn-acc{background:var(--acc);color:#fff}
+.btn-acc:hover{background:var(--acc2)}
+.btn-out{background:transparent;color:var(--ink);border:1.5px solid var(--bdr2)}
+.btn-out:hover{border-color:var(--ink)}
+.btn-wa{background:var(--wa);color:#fff}
+.btn-wa:hover{background:var(--wa2)}
+.btn-lg{font-size:15px;padding:13px 26px}
+.btn-sm{font-size:12px;padding:7px 13px}
+.btn-full{width:100%}
+.btn:disabled{opacity:.45;cursor:not-allowed}
+/* BADGES */
+.bdg{display:inline-block;font-size:9px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;padding:3px 7px;border-radius:3px;background:var(--ink);color:#fff}
+/* HERO */
+.hero{display:grid;grid-template-columns:44% 56%;min-height:min(90vh,740px);overflow:hidden}
+.hero-l{display:flex;justify-content:flex-end;padding:96px 56px 96px max(28px, calc((100vw - 1240px)/2 + 28px));background:var(--bg)}
+.hero-li{max-width:500px;display:flex;flex-direction:column;justify-content:center}
+.hero-tag{display:inline-flex;align-items:center;gap:8px;font-size:10.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--ink3);margin-bottom:24px}
+.hero-tag::before{content:'';width:24px;height:1px;background:var(--bdr2)}
+.hero-h{font-size:clamp(42px,5.8vw,72px);font-weight:800;line-height:1.04;letter-spacing:-.035em;color:var(--ink);margin-bottom:22px}
+.hero-sub{font-size:16px;color:var(--ink2);line-height:1.68;max-width:380px;margin-bottom:36px}
+.hero-ctas{display:flex;gap:10px;flex-wrap:wrap}
+.hero-r{position:relative;overflow:hidden;background:var(--surf2)}
+.hero-r img{width:100%;height:100%;object-fit:cover;object-position:center}
+.hero-fade{position:absolute;inset:0;pointer-events:none;background:linear-gradient(to right,var(--bg) 0%,transparent 24%)}
+/* SECTION HEADERS */
+.sh{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:44px}
+.sh-l{max-width:560px}
+.sh-eye{font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--acc);margin-bottom:10px}
+.sh-t{font-size:clamp(22px,3vw,32px);font-weight:700;letter-spacing:-.022em;line-height:1.18;color:var(--ink)}
+.sh-sub{font-size:14.5px;color:var(--ink2);line-height:1.66;margin-top:10px}
+/* VALUE STRIP */
+.val-strip{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--bdr);border-radius:var(--rl);overflow:hidden}
+.val-col{padding:32px 26px;border-right:1px solid var(--bdr);background:var(--surf)}
+.val-col:last-child{border-right:none}
+.val-label{font-size:9.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--acc);margin-bottom:12px;display:block}
+.val-h{font-size:17px;font-weight:700;letter-spacing:-.02em;margin-bottom:8px;color:var(--ink)}
+.val-t{font-size:13px;color:var(--ink2);line-height:1.62}
+/* PRODUCT CARDS */
+.pgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(248px,1fr));gap:14px}
+.pcard{background:var(--surf);border-radius:var(--rl);overflow:hidden;cursor:pointer;display:flex;flex-direction:column;transition:box-shadow var(--tr),transform var(--tr)}
+.pcard:hover{box-shadow:var(--sh2);transform:translateY(-2px)}
+.pcard-img{aspect-ratio:4/5;overflow:hidden;background:var(--surf2);position:relative;flex-shrink:0}
+.pcard-img img{width:100%;height:100%;object-fit:cover;transition:transform .42s ease}
+.pcard:hover .pcard-img img{transform:scale(1.05)}
+.pcard-bdg{position:absolute;top:10px;left:10px}
+.pcard-b{padding:14px 14px 16px;flex:1;display:flex;flex-direction:column}
+.pcat{font-size:9.5px;font-weight:600;letter-spacing:.09em;text-transform:uppercase;color:var(--ink3);margin-bottom:5px}
+.pname{font-size:14px;font-weight:500;color:var(--ink);line-height:1.38;margin-bottom:14px;flex:1}
+.pfoot{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:auto}
+.pprice{font-size:17px;font-weight:700;letter-spacing:-.01em;color:var(--ink)}
+.padd{width:32px;height:32px;flex-shrink:0;display:flex;align-items:center;justify-content:center;background:var(--ink);color:#fff;border-radius:var(--r);font-size:20px;transition:background var(--tr)}
+.padd:hover{background:var(--acc)}
+/* EDITORIAL */
+.eband{background:var(--ink);padding:88px 0;overflow:hidden}
+.einner{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.etxt{max-width:460px}
+.eeye{font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:18px;display:block}
+.eh{font-size:clamp(26px,3.5vw,42px);font-weight:700;letter-spacing:-.028em;line-height:1.13;color:#fff;margin-bottom:18px}
+.eb{font-size:15px;color:rgba(255,255,255,.55);line-height:1.74;margin-bottom:30px}
+.eimg{border-radius:var(--rl);overflow:hidden;aspect-ratio:4/3}
+.eimg img{width:100%;height:100%;object-fit:cover}
+/* CTA BAND */
+.ctaband{background:var(--acclt);border-top:1px solid #C4DDE9;border-bottom:1px solid #C4DDE9;padding:88px 0;text-align:center}
+.ctah{font-size:clamp(26px,4vw,42px);font-weight:700;letter-spacing:-.028em;margin-bottom:12px}
+.ctasub{font-size:15.5px;color:var(--ink2);margin-bottom:34px}
+.ctaa{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+/* SHOP */
+.shop-top{background:var(--surf);border-bottom:1px solid var(--bdr);padding:40px 0 28px}
+.shop-ctrl{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.cattabs{display:flex;gap:2px;background:var(--bg);border:1px solid var(--bdr);border-radius:7px;padding:3px}
+.ctab{font-size:12.5px;font-weight:600;padding:7px 14px;border-radius:5px;color:var(--ink2);cursor:pointer;transition:all var(--tr);border:none;background:none}
+.ctab.on{background:var(--surf);color:var(--ink);box-shadow:var(--sh1)}
+.sortsel{font-size:13px;font-weight:500;padding:8px 12px;border:1px solid var(--bdr);border-radius:var(--r);background:var(--surf);color:var(--ink);cursor:pointer;outline:none}
+.sortsel:focus{border-color:var(--acc)}
+/* DETAIL */
+.dgrid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
+.dgallery{position:sticky;top:calc(var(--hh) + 20px)}
+.dmain{aspect-ratio:4/5;overflow:hidden;background:var(--surf2);border-radius:var(--rl);margin-bottom:8px}
+.dmain img{width:100%;height:100%;object-fit:cover}
+.dthumbs{display:flex;gap:6px;overflow-x:auto;padding-bottom:2px}
+.dthumb{width:64px;height:64px;flex-shrink:0;border-radius:var(--r);overflow:hidden;cursor:pointer;border:2px solid transparent;transition:border-color var(--tr)}
+.dthumb.on{border-color:var(--acc)}
+.dthumb img{width:100%;height:100%;object-fit:cover}
+.dinfo{padding-top:2px}
+.dbdg{margin-bottom:10px}
+.dn-name{font-size:clamp(20px,2.5vw,26px);font-weight:700;letter-spacing:-.022em;line-height:1.2;margin-bottom:14px}
+.dn-price{font-size:26px;font-weight:800;letter-spacing:-.02em;color:var(--ink);margin-bottom:4px}
+.dn-pdemo{font-size:10.5px;color:var(--ink3);margin-bottom:24px}
+.ddiv{border:none;border-top:1px solid var(--bdr);margin:22px 0}
+.dlbl{font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--ink3);margin-bottom:8px;display:block}
+.ddesc{font-size:14.5px;color:var(--ink2);line-height:1.72;margin-bottom:18px}
+.dcolors{font-size:14px;color:var(--ink2);margin-bottom:18px}
+.qty-wrap{display:inline-flex;align-items:center;border:1px solid var(--bdr);border-radius:var(--r);overflow:hidden;margin-bottom:16px}
+.qbtn{width:40px;height:40px;display:flex;align-items:center;justify-content:center;font-size:18px;color:var(--ink);background:var(--bg);border:none;cursor:pointer;transition:background var(--tr)}
+.qbtn:hover{background:var(--surf2)}
+.qinp{width:48px;text-align:center;font-size:14px;font-weight:600;border:none;outline:none;height:40px;background:var(--surf);-moz-appearance:textfield}
+.qinp::-webkit-inner-spin-button,.qinp::-webkit-outer-spin-button{-webkit-appearance:none}
+.dctas{display:flex;flex-direction:column;gap:8px;margin-bottom:8px}
+.dwa{margin-bottom:20px}
+.dmeta{font-size:12px;color:var(--ink3);margin-bottom:22px}
+.dspecs{background:var(--bg);border-radius:var(--r);padding:18px}
+.dspec{display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid var(--bdr);font-size:13.5px}
+.dspec:last-child{border-bottom:none}
+.dsk{color:var(--ink2);font-weight:500}
+.dsv{font-weight:600;text-align:right;max-width:60%}
+.rel-sec{padding:60px 0;border-top:1px solid var(--bdr);margin-top:64px}
+/* BREADCRUMB */
+.bc{display:flex;gap:6px;align-items:center;font-size:12px;color:var(--ink3);padding:22px 0}
+.bc-item{cursor:pointer;transition:color var(--tr)}
+.bc-item:hover{color:var(--ink)}
+.bc-sep{color:var(--bdr2)}
+/* CART */
+.cart-lay{display:grid;grid-template-columns:1fr 360px;gap:48px;align-items:start}
+.ci{display:grid;grid-template-columns:88px 1fr auto;gap:16px;align-items:start;padding:22px 0;border-bottom:1px solid var(--bdr)}
+.ci-img{width:88px;height:88px;border-radius:var(--r);overflow:hidden;background:var(--surf2)}
+.ci-img img{width:100%;height:100%;object-fit:cover}
+.ci-name{font-size:14.5px;font-weight:600;margin-bottom:3px;line-height:1.3}
+.ci-cat{font-size:11px;color:var(--ink3);margin-bottom:10px}
+.ci-rm{font-size:11.5px;color:var(--ink3);text-decoration:underline;cursor:pointer;display:inline-block;margin-top:7px}
+.ci-rm:hover{color:var(--err)}
+.ci-price{font-size:16px;font-weight:700;text-align:right}
+.csum{background:var(--surf);border:1px solid var(--bdr);border-radius:var(--rl);padding:24px;position:sticky;top:calc(var(--hh) + 20px)}
+.csum-h{font-size:15.5px;font-weight:700;margin-bottom:18px}
+.csum-row{display:flex;justify-content:space-between;font-size:13.5px;padding:9px 0;border-bottom:1px solid var(--bdr)}
+.csum-row:last-child{border-bottom:none}
+.csum-tot{font-size:17px;font-weight:700}
+.empty-st{text-align:center;padding:88px 0}
+.es-h{font-size:22px;font-weight:700;margin-bottom:8px}
+.es-s{font-size:14.5px;color:var(--ink2);margin-bottom:26px}
+/* CHECKOUT */
+.co-grid{display:grid;grid-template-columns:1fr 380px;gap:64px;align-items:start}
+.co-ocard{background:var(--surf);border:1px solid var(--bdr);border-radius:var(--rl);padding:24px;position:sticky;top:calc(var(--hh) + 20px)}
+.fg{margin-bottom:16px}
+.flbl{display:block;font-size:12.5px;font-weight:600;color:var(--ink2);margin-bottom:5px}
+.finp,.fsel,.ftxt{width:100%;padding:11px 13px;font-size:14.5px;border:1.5px solid var(--bdr);border-radius:var(--r);background:var(--surf);color:var(--ink);outline:none;transition:border-color var(--tr)}
+.finp:focus,.fsel:focus,.ftxt:focus{border-color:var(--acc)}
+.finp.err,.ftxt.err{border-color:var(--err)}
+.ftxt{resize:vertical;min-height:90px}
+.demo-notice{background:#F9F8F4;border:1px solid var(--bdr);border-radius:var(--r);padding:12px 14px;font-size:12px;color:var(--ink2);line-height:1.55}
+.ol{display:flex;gap:10px;align-items:flex-start;padding:10px 0;border-bottom:1px solid var(--bdr)}
+.ol:last-child{border-bottom:none}
+.ol-img{width:48px;height:48px;border-radius:var(--r);overflow:hidden;background:var(--surf2);flex-shrink:0}
+.ol-img img{width:100%;height:100%;object-fit:cover}
+.ol-n{font-size:12.5px;font-weight:600;line-height:1.35}
+.ol-q{font-size:11px;color:var(--ink3);margin-top:2px}
+.ol-p{font-size:13.5px;font-weight:700;margin-left:auto;flex-shrink:0}
+.otr{display:flex;justify-content:space-between;font-size:13.5px;padding:8px 0;border-bottom:1px solid var(--bdr)}
+.otr:last-child{border-bottom:none}
+.otr-tot{font-size:16px;font-weight:700}
+/* CONFIRM */
+.conf-wrap{max-width:540px;margin:64px auto;text-align:center;padding:0 24px 80px}
+.conf-ck{width:64px;height:64px;background:var(--ok);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:26px;color:#fff;margin:0 auto 22px}
+.conf-ref{font-size:13px;color:var(--ink3);margin-bottom:22px}
+.conf-card{background:var(--surf);border:1px solid var(--bdr);border-radius:var(--rl);padding:20px;text-align:left;margin-bottom:22px}
+/* ABOUT */
+.ab-hero{background:var(--ink);padding:96px 0}
+.ab-grid{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center}
+.ab-img{border-radius:var(--rl);overflow:hidden;aspect-ratio:4/3}
+.ab-img img{width:100%;height:100%;object-fit:cover}
+.vrow{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--bdr);border:1px solid var(--bdr);border-radius:var(--rl);overflow:hidden}
+.vcard{padding:28px 22px;background:var(--surf)}
+.vcat{font-size:9.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--acc);margin-bottom:10px;display:block}
+.vttl{font-size:15px;font-weight:700;margin-bottom:6px}
+.vtxt{font-size:13px;color:var(--ink2);line-height:1.62}
+/* CONTACT */
+.co-grid-c{display:grid;grid-template-columns:1fr 1fr;gap:72px}
+.ci-row{display:flex;gap:16px;padding:18px 0;border-bottom:1px solid var(--bdr)}
+.ci-ico{font-size:18px;flex-shrink:0;padding-top:2px}
+.ci-lbl{font-size:9.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--ink3);margin-bottom:4px}
+.ci-val{font-size:15px;font-weight:500}
+.ci-val a:hover{color:var(--acc)}
+.ci-note{font-size:11px;color:var(--ink3);margin-top:3px}
+/* FOOTER */
+#ftr{background:var(--ink);color:rgba(255,255,255,.6);padding:60px 0 0}
+.fgrid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;padding-bottom:48px;border-bottom:1px solid rgba(255,255,255,.07)}
+.flm{font-size:20px;font-weight:800;letter-spacing:-.04em;color:#fff;display:block}
+.fls{font-size:6.5px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.3);display:block;margin-top:2px}
+.ftag{font-size:13px;color:rgba(255,255,255,.4);margin-top:16px;line-height:1.65;max-width:250px}
+.fhd{font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.36);margin-bottom:14px}
+.flink{display:block;font-size:13.5px;color:rgba(255,255,255,.56);margin-bottom:8px;cursor:pointer;transition:color var(--tr)}
+.flink:hover,.flink a:hover{color:#fff}
+.flink a{color:inherit}
+.fbot{display:flex;justify-content:space-between;align-items:center;padding:22px 0;font-size:11px;color:rgba(255,255,255,.3)}
+.fsoc{display:flex;gap:6px}
+.sico{display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;background:rgba(255,255,255,.06);border-radius:var(--r);font-size:11px;font-weight:700;color:rgba(255,255,255,.48);transition:all var(--tr);text-decoration:none}
+.sico:hover{background:rgba(255,255,255,.14);color:#fff}
+.fdisc{border-top:1px solid rgba(255,255,255,.05);padding:14px 0;font-size:10.5px;color:rgba(255,255,255,.22);text-align:center}
+/* TOASTS */
+#toasts{position:fixed;bottom:22px;right:22px;z-index:500;display:flex;flex-direction:column;gap:7px;pointer-events:none}
+.toast{background:var(--ink);color:#fff;padding:11px 17px;border-radius:var(--r);font-size:13.5px;font-weight:500;box-shadow:var(--sh3);display:flex;align-items:center;gap:8px;animation:tin .17s ease,tout .27s ease 2.7s forwards;pointer-events:auto}
+@keyframes tin{from{transform:translateX(12px);opacity:0}to{transform:none;opacity:1}}
+@keyframes tout{from{opacity:1}to{opacity:0;pointer-events:none}}
+/* RESPONSIVE 1024 */
+@media(max-width:1024px){
+  .val-strip{grid-template-columns:repeat(2,1fr)}
+  .val-col:nth-child(2){border-right:none}
+  .val-col:nth-child(3){border-top:1px solid var(--bdr)}
+  .fgrid{grid-template-columns:1fr 1fr;gap:32px}
+  .einner{gap:48px}
+  .hero-l{padding-right:40px}
+}
+/* RESPONSIVE 768 */
+@media(max-width:768px){
+  .nav-d{display:none}
+  .hambtn{display:flex}
+  .hero{grid-template-columns:1fr;min-height:auto}
+  .hero-l{order:2;padding:48px 28px 56px;justify-content:flex-start}
+  .hero-li{max-width:100%}
+  .hero-r{order:1;height:280px}
+  .hero-fade{display:none}
+  .sec{padding:60px 0}
+  .val-strip{grid-template-columns:1fr;border-radius:var(--r)}
+  .val-col{border-right:none;border-bottom:1px solid var(--bdr)}
+  .val-col:last-child{border-bottom:none}
+  .val-col:nth-child(3){border-top:none}
+  .einner{grid-template-columns:1fr;gap:36px}
+  .eband{padding:60px 0}
+  .etxt{max-width:100%}
+  .eimg{aspect-ratio:16/9}
+  .dgrid{grid-template-columns:1fr;gap:28px}
+  .dgallery{position:static}
+  .cart-lay{grid-template-columns:1fr;gap:24px}
+  .csum{position:static}
+  .co-grid{grid-template-columns:1fr;gap:24px}
+  .co-ocard{position:static;order:-1}
+  .ab-grid{grid-template-columns:1fr;gap:36px}
+  .co-grid-c{grid-template-columns:1fr;gap:40px}
+  .vrow{grid-template-columns:1fr}
+  .fgrid{grid-template-columns:1fr;gap:28px}
+  .fbot{flex-direction:column;gap:12px;text-align:center}
+  .sh{flex-direction:column;align-items:flex-start}
+  .pgrid{grid-template-columns:repeat(2,1fr);gap:10px}
+  .pcard-b{padding:11px 11px 13px}
+  .pname{font-size:13px}
+  .pprice{font-size:15px}
+}
+@media(max-width:480px){
+  .pgrid{grid-template-columns:repeat(2,1fr);gap:8px}
+  .hero-ctas{flex-direction:column}
+  .hero-ctas .btn{width:100%}
+  .ctaa{flex-direction:column;align-items:center}
+  .ci{grid-template-columns:72px 1fr}
+  .ci-price{grid-column:2}
+}
+
+/* AG STOREFRONT REDESIGN — PASS 1 */
+:root{--bg:#F6F4EF;--surf:#fff;--ink:#181817;--ink2:#5f5d58;--ink3:#8c8982;--acc:#173E46;--bdr:#dedbd3;--bdr2:#bdb9b0}
+body{background:var(--bg);color:var(--ink);font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+#demo-bar{background:#181817;color:rgba(255,255,255,.72);font-size:11px;padding:8px 0}
+#hdr{background:rgba(246,244,239,.96);border-bottom:1px solid rgba(24,24,23,.1);height:72px}
+.lm{font-size:24px;letter-spacing:-.055em}.ls{display:none}.nav-d{gap:8px}.nl{font-size:12.5px;padding:8px 10px;border-radius:0}.nl:hover{background:transparent;text-decoration:underline;text-underline-offset:5px}.nl-wa{font-weight:700;color:var(--acc)}.cbtn{border:0;margin-left:10px;padding:8px 2px}.btn{border-radius:2px}.btn-wa{background:#128C7E}.btn-wa:hover{background:#0d776b}
+.new-hero{display:grid;grid-template-columns:44% 56%;min-height:calc(100vh - 72px);background:var(--bg)}.new-hero-copy{display:flex;flex-direction:column;justify-content:center;padding:72px 56px 72px max(36px,calc((100vw - 1320px)/2 + 36px));max-width:700px}.new-kicker,.new-eyebrow{font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--acc);margin-bottom:14px}.new-hero h1{font-size:clamp(48px,6.2vw,82px);line-height:.98;letter-spacing:-.055em;font-weight:650;max-width:650px;margin-bottom:26px}.new-lede{font-size:16px;line-height:1.7;color:var(--ink2);max-width:430px;margin-bottom:34px}.new-actions{display:flex;gap:10px;flex-wrap:wrap}.new-hero-image{min-height:620px;background:#E8E4DC}.new-hero-image img{width:100%;height:100%;object-fit:cover}
+.new-sec{padding:96px 0}.new-ivory{background:#F6F4EF}.new-white{background:#fff}.new-section-head{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:38px}.new-section-head h2{font-size:clamp(30px,4vw,46px);line-height:1.05;letter-spacing:-.045em;font-weight:650;margin-bottom:10px}.new-section-head p{color:var(--ink2);font-size:14px}.text-link{font-size:13px;font-weight:650;padding:0 0 4px;border-bottom:1px solid var(--ink);white-space:nowrap}
+.cat-grid{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:18px}.cat-tile{background:transparent;text-align:left;cursor:pointer}.cat-img{aspect-ratio:1/1.08;overflow:hidden;background:#E8E4DC}.cat-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}.cat-tile:hover .cat-img img{transform:scale(1.025)}.cat-copy{display:flex;justify-content:space-between;align-items:start;padding:14px 0 0}.cat-name{display:block;font-size:18px;font-weight:650;letter-spacing:-.02em}.cat-sub{display:block;color:var(--ink2);font-size:13px;margin-top:3px}.cat-arrow{font-size:20px}
+.new-pgrid{grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}.new-pgrid .pcard{background:transparent;border-radius:0;box-shadow:none;transform:none}.new-pgrid .pcard:hover{box-shadow:none;transform:none}.new-pgrid .pcard-img{border-radius:0;aspect-ratio:4/5;background:#ebe8e1}.new-pgrid .pcard-b{padding:13px 0 0}.new-pgrid .pname{font-size:14px}.new-pgrid .padd{display:none}.new-pgrid .pcat{font-size:9px}.new-pgrid .pprice{font-size:15px}
+.new-editorial{background:#181817;color:#fff;padding:96px 0}.new-editorial-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}.new-editorial h2{font-size:clamp(36px,5vw,62px);line-height:1;letter-spacing:-.05em;max-width:520px;margin-bottom:18px}.new-editorial p:not(.new-eyebrow){color:rgba(255,255,255,.62);font-size:15px;line-height:1.7;margin-bottom:28px}.new-editorial .new-eyebrow{color:rgba(255,255,255,.45)}.new-editorial img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.why-grid{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--bdr);border-bottom:1px solid var(--bdr)}.why-grid>div{padding:28px 26px 30px;border-right:1px solid var(--bdr)}.why-grid>div:last-child{border-right:0}.why-grid span{font-size:10px;color:var(--ink3)}.why-grid h3{font-size:18px;margin:22px 0 7px}.why-grid p{font-size:13.5px;color:var(--ink2);line-height:1.6}.new-wa{background:#E8E4DC;padding:92px 0;text-align:center}.new-wa h2{font-size:clamp(36px,5vw,58px);letter-spacing:-.05em;line-height:1;margin-bottom:12px}.new-wa>div>p:not(.new-eyebrow){color:var(--ink2);margin-bottom:28px}.new-wa small{display:block;color:var(--ink3);font-size:11px;margin-top:16px}
+@media(max-width:800px){#hdr{height:64px}.nav-d{display:none}.hambtn{display:flex}.new-hero{grid-template-columns:1fr;min-height:0}.new-hero-copy{padding:64px 24px 42px;max-width:none}.new-hero h1{font-size:clamp(46px,13vw,68px)}.new-hero-image{min-height:62vw;max-height:620px}.new-sec{padding:68px 0}.cat-grid{grid-template-columns:1fr 1fr}.cat-tile:first-child{grid-column:1/-1}.new-pgrid{grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 14px}.new-editorial{padding:68px 0}.new-editorial-grid{grid-template-columns:1fr;gap:36px}.why-grid{grid-template-columns:1fr}.why-grid>div{border-right:0;border-bottom:1px solid var(--bdr)}.why-grid>div:last-child{border-bottom:0}}
+@media(max-width:480px){.cat-grid{grid-template-columns:1fr}.cat-tile:first-child{grid-column:auto}.new-section-head{align-items:start}.new-section-head .text-link{display:none}.new-actions{flex-direction:column}.new-actions .btn{width:100%}}
+
+</style>
+<style>
+:root{--warm:#F6F4EF;--ink:#181817;--muted:#6E6C67;--line:#DEDAD2;--stone:#E8E4DC;--deep:#173E46;--rl:0px}
+body{background:var(--warm);color:var(--ink);font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+button,.btn{border-radius:0!important}.wrap{max-width:1240px}.topbar{background:var(--ink)!important}.header{background:rgba(246,244,239,.96)!important;border-bottom:1px solid var(--line)!important}.logo .lm{font-size:23px!important;letter-spacing:-.08em}.logo .ls{display:none!important}.nl{font-weight:600!important}.nl.on{color:var(--ink)!important}.new-hero{background:var(--warm)!important;min-height:650px!important;grid-template-columns:minmax(0,1fr) minmax(380px,1.05fr)!important}.new-hero-copy{padding:92px 7vw 86px 0!important}.new-kicker,.new-eyebrow{color:var(--deep)!important}.new-hero h1{font-family:Georgia,"Times New Roman",serif!important;font-weight:500!important;letter-spacing:-.045em!important;font-size:clamp(52px,7vw,88px)!important;line-height:.95!important}.new-lede{max-width:560px!important;font-size:17px!important;color:#56544f!important}.new-hero-image{min-height:650px!important}.new-hero-image img{width:100%!important;height:100%!important;object-fit:cover!important}.new-sec{padding:88px 0!important}.new-ivory{background:#fff!important}.new-section-head h2,.new-editorial h2,.new-wa h2,.about-hero h1{font-family:Georgia,"Times New Roman",serif!important;font-weight:500!important;letter-spacing:-.035em!important}.new-section-head h2{font-size:clamp(34px,4vw,52px)!important}.cat-grid{gap:16px!important}.cat-tile{background:#fff!important;border:0!important;border-radius:0!important}.cat-img{aspect-ratio:1/1.05!important}.cat-copy{padding:18px 0 2px!important}.cat-name{font-size:18px!important}.cat-sub{color:var(--muted)!important}.pgrid{gap:28px 18px!important}.pcard{border:0!important;background:transparent!important;border-radius:0!important;box-shadow:none!important}.pcard-img{background:#eeece6!important;border-radius:0!important;aspect-ratio:1/1.12!important;overflow:hidden!important}.pcard-img img{transition:transform .45s ease!important}.pcard:hover .pcard-img img{transform:scale(1.025)}.pcard-b{padding:13px 0 0!important}.pcard-meta{display:flex;justify-content:space-between;gap:12px;color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.08em}.pname{font-size:16px!important;font-weight:600!important;margin-top:7px!important}.pfoot{margin-top:13px!important}.pview{font-size:12px!important;color:var(--muted)!important}.padd{display:none!important}.new-editorial{background:var(--ink)!important;padding:96px 0!important}.new-editorial-grid{grid-template-columns:1fr 1fr!important}.new-editorial img{width:100%;height:520px;object-fit:cover}.new-editorial h2,.new-editorial p{color:#fff!important}.why-grid{border-top:1px solid var(--line)!important}.why-grid>div{padding:30px 24px 8px 0!important;border-bottom:0!important}.why-grid span{color:var(--deep)!important}.new-wa{padding:96px 0!important;background:var(--stone)!important}.new-wa h2{font-size:clamp(38px,5vw,62px)!important}.new-wa small{display:block;margin-top:18px;color:var(--muted)!important}.btn-ink{background:var(--ink)!important;color:#fff!important}.btn-wa{background:#25D366!important;color:#071b0d!important}.btn-out{background:transparent!important;border:1px solid rgba(255,255,255,.45)!important;color:#fff!important}.shop-top{background:var(--warm)!important;padding:76px 0 34px!important;border-bottom:1px solid var(--line)!important}.shop-top h1,.cart-page h1,.checkout-page h1{font-family:Georgia,"Times New Roman",serif!important;font-weight:500!important;font-size:clamp(44px,6vw,70px)!important;letter-spacing:-.04em!important}.shop-lede{max-width:640px;color:var(--muted);font-size:16px;line-height:1.65;margin:0 0 30px}.shop-ctrl{border-top:1px solid var(--line);padding-top:16px!important}.ctab{border:0!important;border-bottom:1px solid transparent!important;border-radius:0!important;background:transparent!important;padding:9px 0!important;margin-right:24px!important;color:var(--muted)!important}.ctab.on{color:var(--ink)!important;border-bottom-color:var(--ink)!important}.sortsel{border:1px solid var(--line)!important;border-radius:0!important;background:#fff!important}.shop-count{display:flex;justify-content:space-between;color:var(--muted);font-size:12px;border-bottom:1px solid var(--line);padding-bottom:15px;margin-bottom:24px}.product-detail{padding:20px 0 60px}.dmain{background:#eeece6!important;border-radius:0!important}.dmain img{mix-blend-mode:multiply!important}.dthumb{border-radius:0!important;border:1px solid transparent!important;background:#eeece6}.dthumb.on{border-color:var(--ink)!important}.dinfo{padding-top:28px}.dtype{font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--deep);font-weight:700}.dn-name{font-family:Georgia,"Times New Roman",serif!important;font-size:clamp(38px,4vw,62px)!important;line-height:.98!important;font-weight:500!important;letter-spacing:-.04em!important}.dn-price{font-size:20px!important;font-weight:600!important}.dnote,.dmeta{color:var(--muted)!important}.dlbl{color:var(--muted)!important}.order-box{background:#fff;border:1px solid var(--line);padding:24px;margin:28px 0}.order-box strong{display:block;font-size:16px;margin-bottom:6px}.order-box p{color:var(--muted);line-height:1.6;font-size:13px;margin-bottom:18px}.included{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:20px 0;margin:20px 0}.included strong{display:block;font-size:18px;text-transform:capitalize;margin:6px 0}.included p{font-size:12px;color:var(--muted);line-height:1.6;margin:0}.dwa{display:none!important}.dspec{border-bottom:1px solid var(--line)!important}.cart-page,.checkout-page{padding-top:60px;padding-bottom:90px}.csum,.co-ocard{background:#fff!important;border:1px solid var(--line)!important;border-radius:0!important;box-shadow:none!important}.csum-note{font-size:11px;color:var(--muted);line-height:1.5;margin-top:12px}.notice-clean{display:flex;flex-direction:column;gap:4px;background:var(--stone);padding:16px 18px;margin-bottom:28px;font-size:13px}.notice-clean span{color:var(--muted)}.about-hero{background:var(--ink);color:#fff;padding:110px 0 100px}.about-hero h1{font-size:clamp(52px,7vw,86px);max-width:820px;line-height:.96;margin:14px 0 22px}.about-hero>div>p:last-of-type{max-width:620px;color:rgba(255,255,255,.65);font-size:17px;line-height:1.65}.about-grid,.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}.about-grid h2,.contact-grid h2{font-family:Georgia,"Times New Roman",serif;font-size:clamp(36px,4vw,54px);font-weight:500;letter-spacing:-.035em}.about-grid p,.contact-grid p{color:var(--muted);line-height:1.75;max-width:560px}.about-image img{width:100%;height:580px;object-fit:cover}.contact-hero{padding-bottom:86px}.contact-hero .btn{margin-top:12px}.fgrid{border-top:1px solid rgba(255,255,255,.15)!important}.fdisc{color:rgba(255,255,255,.45)!important}.footer,.ftr{background:var(--ink)!important}
+@media(max-width:800px){.new-hero{display:flex!important;flex-direction:column-reverse!important;min-height:0!important}.new-hero-copy{padding:52px 22px 62px!important}.new-hero-image{min-height:58vw!important}.new-hero h1{font-size:clamp(46px,14vw,68px)!important}.new-sec{padding:62px 0!important}.new-section-head{padding:0 22px!important}.new-pgrid,.pgrid{padding:0 22px}.new-editorial{padding:64px 0}.new-editorial-grid{display:grid!important;grid-template-columns:1fr!important;gap:30px!important;padding:0 22px}.new-editorial img{height:400px}.about-grid,.contact-grid{grid-template-columns:1fr;gap:34px}.about-hero{padding:70px 22px}.about-image img{height:420px}.shop-top{padding:52px 22px 26px}.shop-top .wrap{padding:0}.shop-count{margin:0 22px 24px}.product-detail{padding:0 22px 50px}.dinfo{padding-top:18px}.cart-page,.checkout-page{padding-left:22px;padding-right:22px}.cart-lay,.co-grid{grid-template-columns:1fr!important}.csum{position:static!important}.cat-grid{grid-template-columns:1fr!important;padding:0 22px}.cat-tile{display:grid!important;grid-template-columns:1fr 1fr!important;align-items:center}.cat-img{aspect-ratio:1!important}.cat-copy{padding:20px!important}.fgrid{grid-template-columns:1fr 1fr!important}.new-wa{padding:68px 22px}.header .wrap{padding:0 18px}}
+@media(max-width:480px){.new-actions{flex-direction:column!important;align-items:stretch!important}.new-actions .btn{width:100%!important}.pgrid{grid-template-columns:1fr 1fr!important;gap:28px 12px!important}.pname{font-size:14px!important}.pcard-meta{font-size:9px}.cat-tile{display:block!important}.cat-copy{padding:15px 0!important}.new-editorial img{height:300px}.fgrid{grid-template-columns:1fr!important}}
+</style>
+</head>
+<body>
+<div id="demo-bar">Nationwide delivery available · Pickup in Meru · <a href="https://wa.me/254746514241" target="_blank" rel="noopener">WhatsApp AG</a></div>
+<header id="hdr">
+  <div class="hdr-in">
+    <div class="logo" onclick="go('home')"><span class="lm">AG</span><span class="ls"></span></div>
+    <nav class="nav-d" aria-label="Primary">
+      <button class="nl" onclick="go('shop',{cat:'suitcases'})">Shop</button>
+      <button class="nl" onclick="go('shop',{cat:'suitcases',format:'set'})">Sets</button>
+      <button class="nl" onclick="go('shop',{cat:'suitcases'})">Suitcases</button>
+      <button class="nl" onclick="go('shop',{cat:'tote-bags'})">Bags</button>
+      <button class="nl" onclick="go('about')">About</button>
+      <a class="nl nl-wa" href="https://wa.me/254746514241" target="_blank" rel="noopener">WhatsApp</a>
+    </nav>
+    <button class="cbtn" onclick="go('cart')" aria-label="Shopping cart">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+      Cart <span class="cct hi" id="cct">0</span>
+    </button>
+    <div class="hambtn" onclick="toggleMenu()" role="button" aria-label="Open menu" tabindex="0"><span></span><span></span><span></span></div>
+  </div>
+</header>
+<div id="mmenu" aria-hidden="true" role="dialog" aria-label="Navigation">
+  <div class="m-back" onclick="toggleMenu()"></div>
+  <nav class="m-panel">
+    <div class="m-top">
+      <div class="logo" onclick="go('home')"><span class="lm">AG</span><span class="ls"></span></div>
+      <div class="m-close" onclick="toggleMenu()" aria-label="Close">&#10005;</div>
+    </div>
+    <div class="m-links">
+      <button class="mlink" onclick="go('shop',{cat:'suitcases'})">Shop</button>
+      <button class="mlink" onclick="go('shop',{cat:'suitcases',format:'set'})">Suitcase Sets</button>
+      <button class="mlink" onclick="go('shop',{cat:'suitcases'})">Suitcases</button>
+      <button class="mlink" onclick="go('shop',{cat:'tote-bags'})">Bags</button>
+      <button class="mlink" onclick="go('about')">About</button>
+      <a class="mlink" href="https://wa.me/254746514241" target="_blank" rel="noopener">WhatsApp</a>
+    </div>
+  </nav>
+</div>
+<main id="app"></main>
+<footer id="ftr">
+  <div class="wrap">
+    <div class="fgrid">
+      <div>
+        <span class="flm">AG</span><span class="fls"></span>
+        <p class="ftag">Suitcase sets, individual cases and bags. Pickup in Meru · delivery available nationwide.</p>
+      </div>
+      <div>
+        <div class="fhd">Shop</div>
+        <span class="flink" onclick="go('shop',{cat:'suitcases'})">Suitcases</span>
+        <span class="flink" onclick="go('shop',{cat:'tote-bags'})">Bags</span>
+      </div>
+      <div>
+        <div class="fhd">Company</div>
+        <span class="flink" onclick="go('about')">About</span>
+        <span class="flink" onclick="go('contact')">Contact</span>
+      </div>
+      <div>
+        <div class="fhd">Connect</div>
+        <div class="flink"><a href="https://wa.me/254746514241" target="_blank" rel="noopener">WhatsApp</a></div>
+        <div class="flink"><a href="https://www.facebook.com/musanga.whitney/" target="_blank" rel="noopener">Facebook</a></div>
+        <div class="flink"><a href="https://www.tiktok.com/@agsuitcases" target="_blank" rel="noopener">TikTok</a></div>
+      </div>
+    </div>
+    <div class="fbot">
+      <span>&copy; 2026 AG Suitcases. Kenya.</span>
+      <div class="fsoc">
+        <a href="https://wa.me/254746514241" target="_blank" rel="noopener" class="sico" title="WhatsApp">WA</a>
+        <a href="https://www.facebook.com/musanga.whitney/" target="_blank" rel="noopener" class="sico" title="Facebook">f</a>
+        <a href="https://www.tiktok.com/@agsuitcases" target="_blank" rel="noopener" class="sico" title="TikTok">TT</a>
+      </div>
+    </div>
+    <div class="fdisc">Prices are in Kenyan shillings. Availability, delivery cost and timing are confirmed on WhatsApp.</div>
+  </div>
+</footer>
+<div id="toasts"></div>
+<script>
+var PRODUCTS=[
+  {id:'exec-frame',name:'Executive Frame Set',cat:'suitcases',price:35000,img:['images/01_Executive_suitcases_2_img1.jpg','images/01_Executive_suitcases_2_img3.jpg','images/01_Executive_suitcases_2_img9.jpg'],desc:'Executive hard-shell suitcase sets from the current collection, with structured frame detailing and 4-wheel designs. Available in light, dark and pink finishes.',colours:'Light / Black / Pink',badge:'Premium',featured:true,specs:[['Collection reference','01 — Executive suitcases 2'],['Styles shown','Multiple'],['Colours shown','Light, Black, Pink']]},
+  {id:'rubber-set-3',name:'Classic 3-Piece Set',cat:'suitcases',price:12500,img:['images/02_Rubber_3_img1.jpg','images/02_Rubber_3_img7.jpg','images/02_Rubber_3_img13.jpg','images/02_Rubber_3_img18.jpg'],desc:'A current collection group of matching rubber suitcases photographed in several colour options, including dark grey, pink, purple and tan.',colours:'Dark Grey, Pink, Purple, Tan',badge:null,featured:false,specs:[['Collection reference','02 — Rubber 3'],['Colours shown','Dark Grey, Pink, Purple, Tan'],['Set format','Matching suitcase set']]},
+  {id:'rubber-4in1',name:'4-in-1 Travel Set',cat:'suitcases',price:18500,img:['images/03_Rubber_4_In_1_img1.jpg','images/03_Rubber_4_In_1_img3.jpg','images/03_Rubber_4_In_1_img5.jpg','images/03_Rubber_4_In_1_img8.jpg'],desc:'A 4-in-1 suitcase set from the current collection with four labelled sizes/styles (N01–N04). The catalogue shows multiple colour options.',colours:'Tan, Red, Black, Green',badge:'Best Value',featured:true,specs:[['Collection reference','03 — Rubber 4 In 1'],['Configuration','4-in-1'],['Labels shown','N01, N02, N03, N04'],['Colours shown','Tan, Red, Black, Green']]},
+  {id:'rubber-set-4',name:'Textured 4-Piece Set',cat:'suitcases',price:12500,img:['images/04_rubber_2_img1.jpg','images/04_rubber_2_img3.jpg','images/04_rubber_2_img7.jpg','images/04_rubber_2_img9.jpg'],desc:'Matching rubber suitcase sets from the current collection, photographed in rose, blue, black, green and light neutral finishes.',colours:'Rose, Blue, Black, Green, Light Neutral',badge:null,featured:false,specs:[['Collection reference','04 — Rubber 2'],['Colours shown','Rose, Blue, Black, Green, Light Neutral'],['Set format','Matching suitcase set']]},
+  {id:'themed-suitcases',name:'Printed Suitcase Set',cat:'suitcases',price:14500,img:['images/05_themed_suitcases_img1.jpg','images/05_themed_suitcases_img3.jpg','images/05_themed_suitcases_img7.jpg','images/05_themed_suitcases_img13.jpg'],desc:'Character and graphic-themed suitcase sets from the current collection, with several colourful designs for younger travellers and family trips.',colours:'White, Blue, Green, Pink, Yellow',badge:'New',featured:true,specs:[['Collection reference','05 — Themed suitcases'],['Styles shown','Character / graphic themes'],['Colours shown','Multiple']]},
+  {id:'rubber-textured',name:'Textured Suitcases',cat:'suitcases',price:8500,img:['images/06_rubber_img1.jpg','images/06_rubber_img3.jpg','images/06_rubber_img9.jpg','images/06_rubber_img17.jpg'],desc:'Individual textured rubber suitcase styles from the current collection, including chevron, ribbed and geometric shell patterns.',colours:'Black, Blue, Pink, Silver, Purple',badge:null,featured:false,specs:[['Collection reference','06 — Rubber'],['Format','Individual suitcase styles'],['Shell styles','Chevron, ribbed and geometric']]},
+  {id:'np12-double-zip',name:'Double-Zip 4-Piece Set',cat:'suitcases',price:15000,img:['images/07_rubber_img1.jpg','images/07_rubber_img7.jpg','images/07_rubber_img12.jpg','images/07_rubber_img17.jpg'],desc:'NP12 double-zip suitcase sets from the current collection. The catalogue images show multiple colour options, including lake blue, deep blue, rose, purple, grey, green and golden tones.',colours:'Multiple NP12 colours',badge:'Popular',featured:true,specs:[['Model','NP12'],['Closure','Double zip'],['Colours shown','Multiple'],['Collection reference','07 — Rubber']]},
+  {id:'dh2508-fibre',name:'Fibre 4-Piece Set',cat:'suitcases',price:18000,img:['images/08_fibre_suitcases_img1.jpg','images/08_fibre_suitcases_img3.jpg','images/08_fibre_suitcases_img7.jpg','images/08_fibre_suitcases_img17.jpg'],desc:'DH2508 double-handle fibre suitcase sets from the current collection, with several colour options including silver, pink, teal, cyan, black, red and dark blue.',colours:'Silver, Pink, Teal, Cyan, Black, Red, Dark Blue',badge:null,featured:true,specs:[['Model','DH2508'],['Material','Fibre'],['Handle','Double handle'],['Colours shown','Multiple'],['Collection reference','08 — Fibre suitcases']]},
+  {id:'ribbed-rubber',name:'Ribbed 4-Piece Set',cat:'suitcases',price:14500,img:['images/09_Rubber_suitcases_2_img1.jpg','images/09_Rubber_suitcases_2_img3.jpg','images/09_Rubber_suitcases_2_img7.jpg','images/09_Rubber_suitcases_2_img15.jpg'],desc:'Ribbed-shell rubber suitcase sets from the current collection, shown in lavender, blue, purple, light blue and dark neutral finishes.',colours:'Lavender, Blue, Purple, Light Blue, Dark Neutral',badge:null,featured:false,specs:[['Collection reference','09 — Rubber suitcases 2'],['Shell','Ribbed texture'],['Colours shown','Multiple']]},
+  {id:'executive-blue',name:'Executive 2-Piece Set',cat:'suitcases',price:16000,img:['images/10_Executive_suitcases_2_img1.jpg','images/10_Executive_suitcases_2_img3.jpg','images/10_Executive_suitcases_2_img6.jpg'],desc:'A blue executive suitcase set from the current collection, photographed as a matching set and individual case views.',colours:'Light Blue',badge:null,featured:false,specs:[['Collection reference','10 — Executive suitcases 2'],['Colour shown','Light Blue'],['Format','Matching set / individual views']]},
+  {id:'executive-catalogue',name:'Executive Suitcase Set',cat:'suitcases',price:16000,img:['images/11_Executive_suitcases_1_img2.jpg','images/11_Executive_suitcases_1_img4.jpg','images/11_Executive_suitcases_1_img6.jpg'],desc:'Executive suitcase designs from the current collection as reference images. These images are retained to represent the source catalogue accurately.',colours:'Black, Pink, White, Light Blue',badge:null,featured:false,specs:[['Collection reference','11 — Executive suitcases 1'],['Image type','Catalogue / WhatsApp reference'],['Colours shown','Black, Pink, White, Light Blue']]},
+  {id:'fibre-collection',name:'Geo Panel 4-Piece Set',cat:'suitcases',price:16500,img:['images/12_Fibre_suitcases_img1.jpg','images/12_Fibre_suitcases_img3.jpg','images/12_Fibre_suitcases_img7.jpg','images/12_Fibre_suitcases_img19.jpg'],desc:'Fibre suitcase sets from the current collection, photographed in several colourways including rose, blue, black, cyan, pink and green.',colours:'Rose, Blue, Black, Cyan, Pink, Green',badge:null,featured:false,specs:[['Collection reference','12 — Fibre suitcases'],['Material','Fibre'],['Colours shown','Multiple'],['Set format','Matching suitcase set']]},
+  {id:'rubber-collection',name:'Textured 3-Piece Set',cat:'suitcases',price:14500,img:['images/13_Rubber_suitcases_img1.jpg','images/13_Rubber_suitcases_img5.jpg','images/13_Rubber_suitcases_img9.jpg','images/13_Rubber_suitcases_img17.jpg'],desc:'A broad rubber suitcase collection from the current collection, shown in green, pink, blue and grey colourways with several shell designs.',colours:'Green, Pink, Blue, Grey',badge:null,featured:false,specs:[['Collection reference','13 — Rubber suitcases'],['Colours shown','Green, Pink, Blue, Grey'],['Set format','Matching suitcase set']]},
+  {id:'chrisbella-bags',name:'Chrisbella Bag & Wallet Set',cat:'tote-bags',price:6500,img:['images/14_Chrisbella_bags_img1.jpg','images/14_Chrisbella_bags_img3.jpg','images/14_Chrisbella_bags_img5.jpg','images/14_Chrisbella_bags_img11.jpg'],desc:'Chrisbella bag designs from the current collection, including structured handbag and tote styles photographed in brown, burgundy, neutral and mixed colour combinations.',colours:'Brown, Burgundy, Neutral, Mixed',badge:null,featured:true,specs:[['Collection reference','14 — Chrisbella bags'],['Brand','Chrisbella'],['Styles shown','Structured bags / totes'],['Colours shown','Multiple']]}
+ ];
+PRODUCTS.forEach(function(p){
+  p.format = ({
+    'exec-frame':'set','rubber-set-3':'set','rubber-4in1':'set','rubber-set-4':'set','themed-suitcases':'set',
+    'rubber-textured':'single','np12-double-zip':'set','dh2508-fibre':'set','ribbed-rubber':'set','executive-blue':'set',
+    'executive-catalogue':'set','fibre-collection':'set','rubber-collection':'set','chrisbella-bags':'bag'
+  })[p.id] || 'set';
+  p.pieces = ({
+    'rubber-set-3':'3-piece','rubber-4in1':'4-in-1','rubber-set-4':'4-piece','themed-suitcases':'set',
+    'np12-double-zip':'4-piece','dh2508-fibre':'4-piece','ribbed-rubber':'4-piece','executive-blue':'2-piece',
+    'executive-catalogue':'set','fibre-collection':'4-piece','rubber-collection':'3-piece','chrisbella-bags':'bag & wallet'
+  })[p.id] || (p.format==='single'?'single':'set');
+  p.badge=null;
+});
+var CAT={'suitcases':'Suitcases','tote-bags':'Tote Bags'};
+var cart=[],pg='home',pm={},order=null,mOpen=false;
+function loadCart(){try{cart=JSON.parse(localStorage.getItem('ag-cart')||'[]')}catch(e){cart=[]}}
+function saveCart(){try{localStorage.setItem('ag-cart',JSON.stringify(cart))}catch(e){}badge()}
+function addToCart(id,qty){qty=parseInt(qty)||1;var ex=cart.find(function(i){return i.id===id});if(ex){ex.qty+=qty}else{cart.push({id:id,qty:qty})}saveCart();toast('Added to cart')}
+function removeFromCart(id){cart=cart.filter(function(i){return i.id!==id});saveCart();if(pg==='cart')render()}
+function updateQty(id,d){var item=cart.find(function(i){return i.id===id});if(!item)return;item.qty=Math.max(1,item.qty+d);saveCart();if(pg==='cart')render()}
+function setQty(id,val){var item=cart.find(function(i){return i.id===id});if(!item)return;item.qty=Math.max(1,parseInt(val)||1);saveCart()}
+function cartTotal(){return cart.reduce(function(s,i){var p=PRODUCTS.find(function(pr){return pr.id===i.id});return s+(p?p.price*i.qty:0)},0)}
+function cartCount(){return cart.reduce(function(s,i){return s+i.qty},0)}
+function badge(){var el=document.getElementById('cct');if(!el)return;var n=cartCount();el.textContent=n;el.classList.toggle('hi',n===0)}
+function fmt(n){return 'KES '+n.toLocaleString('en-KE')}
+function waLink(name,price){var msg='Hi AG, I\'m interested in the '+name+'.';if(price)msg+=' The website price is '+fmt(price)+'.';msg+=' Is it available, and what colours are currently available?';return 'https://wa.me/254746514241?text='+encodeURIComponent(msg)}
+function waCartLink(){var lines=cart.map(function(i){var p=PRODUCTS.find(function(pr){return pr.id===i.id});return p?p.name+' x'+i.qty+' — '+fmt(p.price*i.qty):''}).filter(Boolean);var msg='Hi AG, I\'d like to check availability for:\n'+lines.join('\n')+'\nSubtotal: '+fmt(cartTotal())+'\nPlease confirm availability and delivery cost/timing.';return 'https://wa.me/254746514241?text='+encodeURIComponent(msg)}
+function toast(msg){var c=document.getElementById('toasts');var t=document.createElement('div');t.className='toast';t.innerHTML='<span style="color:#4ade80">&#10003;</span> '+msg;c.appendChild(t);setTimeout(function(){t.remove()},3200)}
+function go(p,m){pg=p;pm=m||{};render();window.scrollTo({top:0,behavior:'instant'});if(mOpen)toggleMenu()}
+function toggleMenu(){mOpen=!mOpen;var el=document.getElementById('mmenu');el.classList.toggle('open',mOpen);el.setAttribute('aria-hidden',String(!mOpen));document.body.style.overflow=mOpen?'hidden':''}
+function navActive(){document.querySelectorAll('.nl[data-pg]').forEach(function(el){el.classList.toggle('on',el.dataset.pg===pg)})}
+function render(){var app=document.getElementById('app');switch(pg){case'home':app.innerHTML=pageHome();break;case'shop':app.innerHTML=pageShop();break;case'product':app.innerHTML=pageProduct();break;case'cart':app.innerHTML=pageCart();break;case'checkout':app.innerHTML=pageCheckout();break;case'confirm':app.innerHTML=pageConfirm();break;case'about':app.innerHTML=pageAbout();break;case'contact':app.innerHTML=pageContact();break;default:app.innerHTML=pageHome()}badge();navActive()}
+function Card(p){
+  var meta=p.format==='single'?'Suitcase':(p.format==='bag'?'Bag':(p.pieces&&p.pieces!=='set'?p.pieces+' set':'Suitcase set'));
+  return '<article class="pcard" onclick="go(\'product\',{id:\''+p.id+'\'})" tabindex="0" onkeydown="if(event.key===\'Enter\')go(\'product\',{id:\''+p.id+'\'})">'
+  +'<div class="pcard-img"><img src="'+p.img[0]+'" alt="'+p.name+'" loading="lazy"></div>'
+  +'<div class="pcard-b"><div class="pcard-meta"><span>'+meta+'</span><span>'+fmt(p.price)+'</span></div><h3 class="pname">'+p.name+'</h3>'
+  +'<div class="pfoot"><span class="pview">View product</span><button class="padd" onclick="event.stopPropagation();addToCart(\''+p.id+'\',1)" aria-label="Add '+p.name+' to cart">+</button></div></div></article>';
+}
+function pageHome(){
+  var sets=PRODUCTS.filter(function(p){return p.format==='set'}).slice(0,4);
+  var singles=PRODUCTS.filter(function(p){return p.format==='single'}).slice(0,4);
+  var bags=PRODUCTS.filter(function(p){return p.format==='bag'}).slice(0,1);
+  function tile(label,sub,p,cat){if(!p)return '';return '<button class="cat-tile" onclick="go(\'shop\',{cat:\''+cat+'\'})"><div class="cat-img"><img src="'+p.img[0]+'" alt="'+label+'" loading="lazy"></div><div class="cat-copy"><div><span class="cat-name">'+label+'</span><span class="cat-sub">'+sub+'</span></div><span class="cat-arrow">→</span></div></button>'}
+  return '<section class="new-hero"><div class="new-hero-copy"><p class="new-kicker">Luggage for the journey ahead</p><h1>Your next trip starts here.</h1><p class="new-lede">Suitcase sets, individual cases and everyday bags — selected for good looks, practical use and straightforward buying.</p><div class="new-actions"><button class="btn btn-ink btn-lg" onclick="go(\'shop\',{cat:\'suitcases\'})">Shop suitcase sets</button><a class="btn btn-wa btn-lg" href="https://wa.me/254746514241" target="_blank" rel="noopener">WhatsApp us</a></div></div><div class="new-hero-image"><img src="images/08_fibre_suitcases_img1.jpg" alt="Fibre suitcase set" loading="eager"></div></section>'
+  +'<section class="new-sec"><div class="wrap"><div class="new-section-head"><div><p class="new-eyebrow">Shop</p><h2>Choose what you need.</h2></div><button class="text-link" onclick="go(\'shop\')">View all →</button></div><div class="cat-grid">'+tile('Suitcase Sets','Everything you need, together.',sets[0],'suitcases')+tile('Suitcases','One case. The right one.',singles[0],'suitcases')+tile('Bags','Everyday carry, sorted.',bags[0],'tote-bags')+'</div></div></section>'
+  +'<section class="new-sec new-ivory"><div class="wrap"><div class="new-section-head"><div><p class="new-eyebrow">Suitcase sets</p><h2>More pieces, one purchase.</h2><p>Coordinated sets for trips of different lengths.</p></div><button class="text-link" onclick="go(\'shop\',{cat:\'suitcases\'})">Shop sets →</button></div><div class="pgrid new-pgrid">'+sets.map(Card).join('')+'</div></div></section>'
+  +'<section class="new-sec"><div class="wrap"><div class="new-section-head"><div><p class="new-eyebrow">Individual cases</p><h2>Need just one?</h2><p>Individual suitcases from KSh 6,500.</p></div><button class="text-link" onclick="go(\'shop\',{cat:\'suitcases\'})">Shop suitcases →</button></div><div class="pgrid new-pgrid">'+singles.map(Card).join('')+'</div></div></section>'
+  +'<section class="new-editorial"><div class="wrap new-editorial-grid"><div><p class="new-eyebrow">AG</p><h2>Pack for where you’re going.</h2><p>Choose your style. Check availability. Order on WhatsApp.</p><button class="btn btn-out btn-lg" onclick="go(\'shop\')">View all luggage</button></div><div><img src="images/07_rubber_img1.jpg" alt="AG suitcase collection" loading="lazy"></div></div></section>'
+  +'<section class="new-sec new-white"><div class="wrap"><div class="new-section-head single"><div><p class="new-eyebrow">Why AG</p><h2>Simple from browsing to buying.</h2></div></div><div class="why-grid"><div><span>01</span><h3>Clear prices</h3><p>Know what you’re paying before you enquire.</p></div><div><span>02</span><h3>Real product photos</h3><p>See the actual colours and designs before choosing.</p></div><div><span>03</span><h3>Simple ordering</h3><p>Choose online. Confirm the details on WhatsApp.</p></div></div></div></section>'
+  +'<section class="new-wa"><div class="wrap"><p class="new-eyebrow">Need help choosing?</p><h2>Tell us what you’re looking for.</h2><p>We’ll confirm availability, delivery or pickup details on WhatsApp.</p><a class="btn btn-wa btn-lg" href="https://wa.me/254746514241" target="_blank" rel="noopener">Chat with AG on WhatsApp</a><small>Pickup available in Meru · Delivery available nationwide</small></div></section>';
+}
+function pageShop(){
+  var cat=pm.cat||'suitcases',sort=pm.sort||'default',format=pm.format||'all';
+  var items=PRODUCTS.filter(function(p){return p.cat===cat&&(format==='all'||p.format===format)});
+  if(sort==='asc')items=items.slice().sort(function(a,b){return a.price-b.price});
+  if(sort==='desc')items=items.slice().sort(function(a,b){return b.price-a.price});
+  var tabs='<button class="ctab'+(cat==='suitcases'?' on':'')+'" onclick="go(\'shop\',{cat:\'suitcases\',sort:\''+sort+'\'})">Suitcases</button><button class="ctab'+(cat==='tote-bags'?' on':'')+'" onclick="go(\'shop\',{cat:\'tote-bags\',sort:\''+sort+'\'})">Bags</button>';
+  var grid=items.length===0?'<div class="empty-st"><h3 class="es-h">Nothing here yet</h3><p class="es-s">Browse the suitcase collection or message us on WhatsApp.</p><button class="btn btn-ink" onclick="go(\'shop\',{cat:\'suitcases\'})">Browse Suitcases</button></div>':'<div class="shop-count"><span>'+items.length+' product'+(items.length!==1?'s':'')+'</span><span>Prices shown are current</span></div><div class="pgrid">'+items.map(Card).join('')+'</div>';
+  return'<div class="shop-top"><div class="wrap"><p class="new-eyebrow">Shop</p><h1>Find your luggage.</h1><p class="shop-lede">Sets, individual suitcases and bags. Choose a product, then confirm availability with AG on WhatsApp.</p><div class="shop-ctrl"><div class="cattabs">'+tabs+'</div><select class="sortsel" onchange="go(\'shop\',{cat:\''+cat+'\',sort:this.value})" aria-label="Sort products"><option value="default"'+(sort==='default'?' selected':'')+'>Featured</option><option value="asc"'+(sort==='asc'?' selected':'')+'>Price: Low to High</option><option value="desc"'+(sort==='desc'?' selected':'')+'>Price: High to Low</option></select></div></div></div><div class="wrap sec">'+grid+'</div>';
+}
+function pageProduct(){
+  var p=PRODUCTS.find(function(pr){return pr.id===pm.id});
+  if(!p)return'<div class="wrap sec"><p>Product not found.</p><br><button class="btn btn-ink" onclick="go(\'shop\')">Back to Shop</button></div>';
+  var related=PRODUCTS.filter(function(pr){return pr.id!==p.id&&pr.cat===p.cat}).slice(0,4);
+  var thumbs=p.img.length>1?'<div class="dthumbs">'+p.img.map(function(img,i){return'<button class="dthumb'+(i===0?' on':'')+'" onclick="switchImg('+i+',\''+p.id+'\')"><img src="'+img+'" alt="'+p.name+' view '+(i+1)+'" loading="lazy"></button>'}).join('')+'</div>':'';
+  var specs=p.specs&&p.specs.length?'<div class="dspecs"><span class="dlbl" style="margin-bottom:14px">Product details</span>'+p.specs.filter(function(s){return !/Collection reference|Image type|Colours shown/.test(s[0])}).map(function(s){return'<div class="dspec"><span class="dsk">'+s[0]+'</span><span class="dsv">'+s[1]+'</span></div>'}).join('')+'</div>':'';
+  var included=p.pieces&&p.pieces!=='set'&&p.pieces!=='single'&&p.pieces!=='bag'?'<div class="included"><span class="dlbl">What’s included</span><strong>'+p.pieces.replace('-', ' ')+'</strong><p>This product is sold as a coordinated set. Confirm the exact pieces and available colour with AG before ordering.</p></div>':'';
+  var rel=related.length?'<div class="rel-sec"><div class="sh"><div class="sh-l"><p class="sh-eye">More to explore</p><h2 class="sh-t">You may also like</h2></div></div><div class="pgrid">'+related.map(Card).join('')+'</div></div>':'';
+  return'<div class="wrap"><div class="bc"><span class="bc-item" onclick="go(\'home\')">Home</span><span class="bc-sep">›</span><span class="bc-item" onclick="go(\'shop\',{cat:\''+p.cat+'\'})">'+(CAT[p.cat]||p.cat)+'</span><span class="bc-sep">›</span><span>'+p.name+'</span></div>'
+  +'<div class="dgrid product-detail"><div class="dgallery"><div class="dmain"><img src="'+p.img[0]+'" alt="'+p.name+'" id="dmi" loading="eager"></div>'+thumbs+'</div>'
+  +'<div class="dinfo"><p class="dtype">'+(p.format==='single'?'Individual suitcase':p.format==='bag'?'Bag & wallet set':'Suitcase set')+'</p><h1 class="dn-name">'+p.name+'</h1><div class="dn-price">'+fmt(p.price)+'</div><p class="dnote">Current website price · delivery confirmed separately</p>'
+  +'<hr class="ddiv"><span class="dlbl">Colours shown</span><p class="dcolors">'+p.colours+'</p>'
+  +'<span class="dlbl">About this product</span><p class="ddesc">'+p.desc.replace(/current collection|catalogue/gi,'current collection')+'</p>'+included+specs
+  +'<div class="order-box"><strong>Check availability before ordering</strong><p>Tell us the colour you want. We’ll confirm availability, delivery cost and timing on WhatsApp.</p><a href="'+waLink(p.name,p.price)+'" target="_blank" rel="noopener" class="btn btn-wa btn-lg btn-full">Check availability on WhatsApp</a></div>'
+  +'<hr class="ddiv"><span class="dlbl">Prefer to use the cart?</span><p class="ddesc small">Add the item to your order request, then send the request to AG. No payment is taken on this site.</p>'
+  +'<div class="qty-wrap"><button class="qbtn" onclick="var e=document.getElementById(\'qinp\');e.value=Math.max(1,parseInt(e.value)-1)" aria-label="Decrease">−</button><input type="number" id="qinp" class="qinp" value="1" min="1" max="99" aria-label="Quantity"><button class="qbtn" onclick="var e=document.getElementById(\'qinp\');e.value=Math.min(99,parseInt(e.value)+1)" aria-label="Increase">+</button></div><button class="btn btn-ink btn-lg btn-full" onclick="addToCart(\''+p.id+'\',parseInt(document.getElementById(\'qinp\').value)||1)">Add to order request</button>'
+  +'<p class="dmeta">Nationwide delivery available · Pickup in Meru</p></div></div>'+rel+'</div>';
+}
+function switchImg(idx,pid){var p=PRODUCTS.find(function(pr){return pr.id===pid});if(!p)return;var img=document.getElementById('dmi');if(img)img.src=p.img[idx];document.querySelectorAll('.dthumb').forEach(function(el,i){el.classList.toggle('on',i===idx)})}
+function pageCart(){
+  if(cart.length===0)return'<div class="wrap"><div class="empty-st"><h2 class="es-h">Your order request is empty</h2><p class="es-s">Browse the collection and add the pieces you want us to confirm.</p><button class="btn btn-ink btn-lg" onclick="go(\'shop\',{cat:\'suitcases\'})">Shop Suitcases</button></div></div>';
+  var total=cartTotal();
+  var items=cart.map(function(i){var p=PRODUCTS.find(function(pr){return pr.id===i.id});if(!p)return'';return'<div class="ci"><div class="ci-img"><img src="'+p.img[0]+'" alt="'+p.name+'" loading="lazy"></div><div><div class="ci-name">'+p.name+'</div><div class="ci-cat">'+(CAT[p.cat]||p.cat)+'</div><div class="qty-wrap" style="transform:scale(.82);transform-origin:left"><button class="qbtn" onclick="updateQty(\''+p.id+'\',-1)" aria-label="Decrease">−</button><input type="number" class="qinp" value="'+i.qty+'" min="1" aria-label="Quantity" onblur="setQty(\''+p.id+'\',this.value);if(pg===\'cart\')render()"><button class="qbtn" onclick="updateQty(\''+p.id+'\',1)" aria-label="Increase">+</button></div><button class="ci-rm" onclick="removeFromCart(\''+p.id+'\')">Remove</button></div><div class="ci-price">'+fmt(p.price*i.qty)+'</div></div>'}).join('');
+  return'<div class="wrap cart-page"><p class="new-eyebrow">Your selection</p><h1>Order request</h1><p class="shop-lede">Review your items, then send the request to AG. Availability and delivery are confirmed on WhatsApp.</p><div class="cart-lay"><div>'+items+'<div style="margin-top:18px"><button class="btn btn-out" onclick="go(\'shop\')">Continue Shopping</button></div></div><div class="csum"><div class="csum-h">Order summary</div><div class="csum-row"><span>Subtotal</span><span>'+fmt(total)+'</span></div><div class="csum-row"><span>Delivery</span><span>Confirmed on WhatsApp</span></div><div class="csum-row csum-tot"><span>Order subtotal</span><span>'+fmt(total)+'</span></div><button class="btn btn-ink btn-lg btn-full" style="margin-top:16px" onclick="go(\'checkout\')">Continue to details</button><a href="#" target="_blank" rel="noopener" class="btn btn-wa btn-full" style="margin-top:8px;display:flex;align-items:center;justify-content:center" onclick="this.href=waCartLink()">Send on WhatsApp</a><p class="csum-note">No payment is processed on this website.</p></div></div></div>';
+}
+function pageCheckout(){
+  if(cart.length===0)return'<div class="wrap sec" style="text-align:center"><p>Your order request is empty.</p><br><button class="btn btn-ink" onclick="go(\'shop\')">Shop Now</button></div>';
+  var total=cartTotal();
+  var lines=cart.map(function(i){var p=PRODUCTS.find(function(pr){return pr.id===i.id});if(!p)return'';return'<div class="ol"><div class="ol-img"><img src="'+p.img[0]+'" alt="'+p.name+'" loading="lazy"></div><div style="flex:1"><div class="ol-n">'+p.name+'</div><div class="ol-q">Qty: '+i.qty+'</div></div><div class="ol-p">'+fmt(p.price*i.qty)+'</div></div>'}).join('');
+  return'<div class="wrap checkout-page"><div class="bc"><span class="bc-item" onclick="go(\'cart\')">Order request</span><span class="bc-sep">›</span><span>Your details</span></div><h1>Confirm your order request</h1><p class="shop-lede">Send us your details. We’ll confirm product availability, delivery cost and timing on WhatsApp before anything is final.</p><div class="co-grid"><div><div class="notice-clean"><strong>No payment is taken here.</strong><span>This site collects your order request only.</span></div><h3>Your details</h3><div class="fg"><label class="flbl" for="f-name">Full name *</label><input type="text" class="finp" id="f-name" placeholder="Your full name" autocomplete="name"></div><div class="fg"><label class="flbl" for="f-phone">Phone / WhatsApp *</label><input type="tel" class="finp" id="f-phone" placeholder="e.g. 0712 345 678" autocomplete="tel"></div><div class="fg"><label class="flbl" for="f-email">Email address</label><input type="email" class="finp" id="f-email" placeholder="Optional" autocomplete="email"></div><div class="fg"><label class="flbl" for="f-loc">Delivery location *</label><input type="text" class="finp" id="f-loc" placeholder="Town / area / estate"></div><div class="fg"><label class="flbl" for="f-note">Notes</label><textarea class="ftxt" id="f-note" placeholder="Colour preference or anything else we should know"></textarea></div><button class="btn btn-ink btn-lg btn-full" onclick="placeOrder()">Create order request</button></div><div class="co-ocard"><h3>Your selection</h3>'+lines+'<div style="margin-top:14px"><div class="otr"><span>Subtotal</span><span>'+fmt(total)+'</span></div><div class="otr"><span>Delivery</span><span>Confirmed separately</span></div><div class="otr otr-tot"><span>Order subtotal</span><span>'+fmt(total)+'</span></div></div><a href="#" target="_blank" rel="noopener" class="btn btn-wa btn-full" style="margin-top:16px;display:flex;align-items:center;justify-content:center" onclick="this.href=waCartLink()">Send selection on WhatsApp</a></div></div></div>';
+}
+function waOrderLink(){if(!order)return '#';var lines=order.items.map(function(i){var p=PRODUCTS.find(function(pr){return pr.id===i.id});return p?p.name+' x'+i.qty+' — '+fmt(p.price*i.qty):''}).filter(Boolean);var msg='Hi AG Suitcases Collection, I\'d like to confirm this order request.\nReference: '+order.ref+'\nName: '+order.name+'\nPhone: '+order.phone+'\nDelivery: '+order.loc+'\n\n'+lines.join('\n')+'\nSubtotal: '+fmt(order.total);if(order.note)msg+='\nNotes: '+order.note;msg+='\nPlease confirm availability and delivery charges.';return 'https://wa.me/254746514241?text='+encodeURIComponent(msg)}
+function placeOrder(){
+  var name=(document.getElementById('f-name')||{}).value||'';
+  var phone=(document.getElementById('f-phone')||{}).value||'';
+  var loc=(document.getElementById('f-loc')||{}).value||'';
+  var ok=true;
+  ['f-name','f-phone','f-loc'].forEach(function(id){var el=document.getElementById(id);if(!el)return;if(!el.value.trim()){el.classList.add('err');ok=false}else el.classList.remove('err')});
+  if(!ok){toast('Please fill in all required fields');return}
+  order={ref:'AG-'+Date.now().toString(36).slice(-6).toUpperCase(),name:name.trim(),phone:phone.trim(),loc:loc.trim(),email:((document.getElementById('f-email')||{}).value||'').trim(),note:((document.getElementById('f-note')||{}).value||'').trim(),items:cart.map(function(i){return{id:i.id,qty:i.qty}}),total:cartTotal()};
+  cart=[];saveCart();go('confirm')
+}
+function pageConfirm(){
+  if(!order)return'<div class="wrap sec" style="text-align:center"><p>No order found.</p><br><button class="btn btn-ink" onclick="go(\'home\')">Go Home</button></div>';
+  var lines=order.items.map(function(i){var p=PRODUCTS.find(function(pr){return pr.id===i.id});if(!p)return'';return'<div style="display:flex;justify-content:space-between;padding:7px 0;border-bottom:1px solid var(--bdr);font-size:13.5px"><span>'+p.name+' <span style="color:var(--ink3)">\xd7'+i.qty+'</span></span><strong>'+fmt(p.price*i.qty)+'</strong></div>'}).join('');
+  return'<div class="wrap"><div class="conf-wrap"><div class="conf-ck">&#10003;</div><h1 style="font-size:clamp(22px,4vw,34px);font-weight:700;letter-spacing:-.022em;margin-bottom:8px">Order request received</h1><p class="conf-ref">Reference: <strong>'+order.ref+'</strong></p><p style="font-size:14.5px;color:var(--ink2);line-height:1.7;margin-bottom:22px">Thank you, <strong>'+order.name+'</strong>. We\'ve noted your details.<br>Our team will be in touch to confirm delivery to <strong>'+order.loc+'</strong>.</p><div class="conf-card"><p style="font-size:9.5px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--ink3);margin-bottom:12px">Order Summary</p>'+lines+'<div style="display:flex;justify-content:space-between;padding:14px 0 0;font-size:16px;font-weight:700"><span>Total</span><span>'+fmt(order.total)+'</span></div></div><div class="notice-clean" style="margin-bottom:22px;text-align:left">&#9888; <strong>No payment has been processed.</strong> Confirm the order and delivery details with AG on WhatsApp.</div><a href="#" target="_blank" rel="noopener" class="btn btn-wa btn-lg btn-full" style="margin-bottom:10px;display:flex;align-items:center;justify-content:center" onclick="this.href=waOrderLink()">Confirm Order on WhatsApp</a><button class="btn btn-out btn-full" onclick="go(\'shop\',{cat:\'suitcases\'})">Continue Shopping</button></div></div>'
+}
+function pageAbout(){
+ return'<section class="about-hero"><div class="wrap"><p class="new-eyebrow">About AG</p><h1>Luggage that looks right and works for the trip.</h1><p>AG Suitcases Collection is a Kenya-based luggage retailer offering suitcase sets, individual cases and bags at clear prices.</p></div></section>'
+ +'<section class="sec"><div class="wrap about-grid"><div><p class="new-eyebrow">How we work</p><h2>Browse here. Confirm with us.</h2><p>We keep the website focused on the products: real photos, current prices and the details we can verify. When you find something you want, WhatsApp is the final step for checking availability, delivery cost and timing.</p><p>Pickup is available in Meru, and nationwide delivery can be arranged.</p></div><div class="about-image"><img src="images/01_Executive_suitcases_2_img1.jpg" alt="AG executive suitcase set" loading="lazy"></div></div></section>'
+ +'<section class="new-sec new-ivory"><div class="wrap"><div class="why-grid"><div><span>01</span><h3>Clear prices</h3><p>The price shown on the site is the current website price.</p></div><div><span>02</span><h3>Real products</h3><p>Browse the actual catalogue photography before you choose.</p></div><div><span>03</span><h3>Human confirmation</h3><p>We confirm availability and delivery details with you on WhatsApp.</p></div></div></div></section>'
+ +'<section class="new-wa"><div class="wrap"><h2>Need help choosing?</h2><p>Message AG and tell us what you need.</p><a class="btn btn-wa btn-lg" href="https://wa.me/254746514241" target="_blank" rel="noopener">Chat with AG on WhatsApp</a></div></section>';
+}
+function pageContact(){
+ return'<section class="about-hero contact-hero"><div class="wrap"><p class="new-eyebrow">Contact</p><h1>Talk to AG.</h1><p>WhatsApp is the fastest way to check availability, ask about colours, or arrange delivery or pickup.</p><a class="btn btn-wa btn-lg" href="https://wa.me/254746514241" target="_blank" rel="noopener">Open WhatsApp</a></div></section>'
+ +'<section class="sec"><div class="wrap contact-grid"><div><p class="new-eyebrow">WhatsApp</p><h2>+254 746 514 241</h2><p>For product questions and order requests, message us directly.</p><a class="text-link" href="https://wa.me/254746514241" target="_blank" rel="noopener">Start a chat →</a></div><div><p class="new-eyebrow">Location</p><h2>Meru, Kenya</h2><p>Pickup is available in Meru. Nationwide delivery is available; cost and timing are confirmed based on your location.</p></div></div></section>';
+}
+function sendMsg(){var name=(document.getElementById('cm-name')||{}).value||'';var msg=(document.getElementById('cm-msg')||{}).value||'';if(!name.trim()||!msg.trim()){toast('Please fill in your name and message');return}toast('Message ready to send on WhatsApp');['cm-name','cm-phone','cm-email','cm-msg'].forEach(function(id){var el=document.getElementById(id);if(el)el.value=''})}
+loadCart();render();
+window.addEventListener('resize',function(){if(window.innerWidth>768&&mOpen)toggleMenu()});
+</script>
+</body>
+</html>
